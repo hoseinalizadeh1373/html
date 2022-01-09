@@ -1,0 +1,11 @@
+#section1 .items .item{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+#section1 .items .item i{
+    margin-left: 1.3rem;
+    align-self: center;
+    margin-bottom: 0;
+}
