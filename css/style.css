@@ -6,7 +6,11 @@
          url('../fonts/Vazir.woff') format('woff'), /* Pretty Modern Browsers */
          url('../fonts/Vazir.ttf')  format('truetype'), /* Safari, Android, iOS */
   }
+
   
+  html{
+    scroll-behavior: smooth;
+  }
   /* Reset */
   * {
     margin: 0;
@@ -217,4 +221,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  #snackbar{
+      visibility: hidden;
+      min-width: 280px;
+      margin-left: -150px;
+      background-color: #333;
+      color: #ff3;
+      text-align: center;
+      border-radius: 20px;
+      padding: 15px;
+      position: fixed;
+      z-index: 3;
+      left: 50%;
+      bottom: 30px;
+  }
+  #snackbar.show{
+    visibility: visible;
+    -webkit-animation: fadein 0.5s,fadeout 0.5s 2.5s;
+    animation: fadein 0.5s,fadeout 0.5s 2.5s;
+  }
+  @-webkit-keyframes fadein{
+    from{bottom: 0;opacity: 0;}
+    to{bottom: 30px;opacity: 1;}
+  }
+  @keyframes fadein{
+    from{bottom: 0;opacity: 0;}
+    to{bottom: 30px;opacity: 1;}
+  }
+  @-webkit-keyframes fadeout{
+    from{bottom: 30px;opacity: 1;}
+    to{bottom: 0;opacity: 0;}
+  }
+  @keyframes fadeout{
+    from {bottom: 30px;opacity: 1;}
+    to{bottom: 0;opacity: 0;}
   }
