@@ -42,15 +42,52 @@
   
   .bg-light{
   background: #f4f4f4;
-  color: #333
+  color: #333;
+  
+
   }
   
   .text-primary {
     color: orange
   }
-  
+  .wrap{
+    text-align: center;
+    margin: 20px;
+    position: relative;
+  }
+  .wrap::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    border-top: 1px solid black;
+      background: black;
+      width: 100%;
+      transform: translateY(-50%);
+
+  }
+  #sec1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px 10px;
+  }
   .text-center{
-    text-align: center
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid yellowgreen;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+ 
+    
+    border-radius: 15px;
+    
+    padding: 1rem ;
+
   }
   
   .list{
@@ -132,7 +169,7 @@
   }
   
   #showcase{
-    background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+    background: #333 url('../img/emam-zaman4.jpg') no-repeat center center/cover;
     height: 100vh;
   }
   
