@@ -31,10 +31,70 @@
   
   .container{
     max-width: 1100px;
-    margin: auto;
-    padding: 0 2rem
+    
+    margin-left: auto;
+    margin-left: auto;
+    
+    overflow: hidden;
+    
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    
   }
-  
+  .bg-light::after{
+    content: 'ee';
+    text-align: left;
+    
+    
+    background: blueviolet;
+    
+    display: block;
+  }
+  .card::after{
+    content: 'more ';
+    max-width: 50px;
+    height: 20px;
+  }
+  .cont{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+position: relative;
+    background: red;
+  }
+  .cont::after{
+    position: absolute;
+    content: 'left';
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 400px;
+    vertical-align: center;
+    margin-bottom: 200px;
+  }
+  .cont::before{
+    content: 'right';
+  }
+  .card{
+    scroll-behavior: smooth;
+    align-items: center;
+    max-width: 1100px;
+    overflow: scroll;
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;
+   overflow-y: hidden;
+   padding: 1rem;
+   
+  }
+  .cardak{
+
+    background: yellowgreen;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+  }
   .bg-dark{
     background: #333;
     color: white;
@@ -191,7 +251,7 @@
   #section1 .items .item{
     flex: 1;
     text-align: center;
-    padding: 1rem
+    padding: 3rem
   }
   
   #section1 .items .item i{
