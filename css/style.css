@@ -12,8 +12,11 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    letter-spacing: 4;
+
   }
   
+
   /* Main Styling */
   html,body {
     font-family: 'Vazir', Arial, Helvetica, sans-serif;
@@ -183,19 +186,33 @@ position: absolute;
     font-size: 1.3rem;
     font-weight: bold
   }
-  
+  .container_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
   .btn{
+    padding: 0.9rem;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    
+    border: none;
     color: white;
-    background: orange;
-    padding: 0.5rem 2rem;
-    border-radius: 5px;
-  
+    background-color: rgb(255, 0,64);
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: inset 0 0 0 0 yellow;
+    transition: ease-in-out 0.3s;
+    outline: none;
   }
   
   
   .btn:hover{
-    color: orange;
-    background: white;
+    box-shadow: inset 150px 0 0 0 yellow;
   }
   
   
