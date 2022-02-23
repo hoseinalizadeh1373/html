@@ -21,6 +21,7 @@
   html,body {
     font-family: 'Vazir', Arial, Helvetica, sans-serif;
     line-height: 1.4;
+    scroll-behavior: smooth;
   }
   
   a {
@@ -45,12 +46,13 @@
     align-items: center;
     max-width: 1100px;
     overflow: hidden;
-   display: flex;
-   margin-left: auto;
-   margin-right: auto;
-   overflow-y: hidden;
-   padding: 1rem;
-pointer-events: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: hidden;
+    padding: 1rem;
+    pointer-events: none;
+   
    
   }
   .card::after{
@@ -68,6 +70,7 @@ pointer-events: none;
     pointer-events: none;
     justify-content: center;
     align-items: center;
+    
   }
   
  .cont::after{
@@ -229,6 +232,44 @@ position: absolute;
   .py-2{padding: 2rem 0 }
   .py-3{padding: 3rem 0 }
   
+  .scroll-down{
+    width: 30px;
+    height: 50px;
+    border: 2px solid rgb(12, 160,255);
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .scroll-down::before,
+  .scroll-down::after{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border: 2px solid rgba(55, 55,50, 0.8);
+    width: 10px;
+    height: 10px ;
+    transform: translate(-50%,-80%)rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  .scroll-down::after{
+    top: 30%;
+    animation-delay: .3s;
+  }
+  @keyframes scroll-down{
+    0%{opacity: 0;}
+    30%{opacity: 1;}
+    60%{
+      opacity: 1;
+    }
+    100%{opacity: 0;
+    top: 90%;
+    }
+  }
   
   #navbar{
     display: flex;
@@ -237,6 +278,8 @@ position: absolute;
     position: sticky;
     top: 0;
     z-index: 1;
+    position: absolute;
+    width: 100%;
   }
   
   #navbar a{
@@ -267,6 +310,7 @@ position: absolute;
     /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
     background: url('../img/background-showcase.jpg') no-repeat center center/cover;
     height: 100vh;
+    position: relative;
   }
   
   #showcase .showcase-content{
@@ -276,7 +320,7 @@ position: absolute;
     
     grid-template-rows: 85vh auto ;
     gap: 0px 0px;
-    height: 100vh;
+    height: 80vh;
     color: darkturquoise;
  
   
@@ -340,6 +384,20 @@ position: absolute;
       100%{margin-right: 17%;}
     }
    
+    #sec-1 {
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+    }
+    #sec-2{
+      min-height: 100vh;
+      width: 100%;
+    }
+    
   #section1 .items{
     display: flex;
     padding: 1rem
