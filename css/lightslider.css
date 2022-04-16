@@ -5,6 +5,7 @@
 
 .lSSlideOuter {
     overflow: hidden;
+    margin-top: 1vh;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -17,6 +18,7 @@
     display: table;
 }
 .lightSlider {
+   margin-top: 10%;
     overflow: hidden;
     margin: 0;
 }

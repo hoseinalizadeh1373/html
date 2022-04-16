@@ -13,6 +13,7 @@
     padding:0;
     box-sizing: border-box;
     letter-spacing: 4;
+   
 
   }
   
@@ -24,6 +25,8 @@
     font-family: 'Vazir', Arial, Helvetica, sans-serif;
     line-height: 1.4;
     scroll-behavior: smooth;
+    background-image: linear-gradient(to top, #96fbc3c2 0%, #e2df913d 100%);
+    direction: rtl;
   }
   
   a {
@@ -79,7 +82,7 @@
     pointer-events: auto;
     cursor: pointer;
     content: '';
-    background: url('../img/circle-arrow-right-solid.svg')no-repeat;
+    background: url('../img/circle-arrow-right-solid.svg') no-repeat;
     width: 100px;
     height: 80px;
     font-family: "Font Awesome 5 Free";
@@ -92,7 +95,7 @@
      transform: rotate(1deg) translate(20px,0px);
     cursor: pointer;
     content: '';
-    background: url('../img/circle-arrow-left-solid.svg')no-repeat;
+    background: url('../img/circle-arrow-left-solid.svg') no-repeat;
     
     width: 100px;
     height: 80px;
@@ -253,7 +256,7 @@ position: absolute;
     border: 2px solid rgba(55, 55,50, 0.8);
     width: 10px;
     height: 10px ;
-    transform: translate(-50%,-80%)rotate(45deg);
+    transform: translate(-50%,-80%) rotate(45deg);
     border-top: transparent;
     border-left: transparent;
     animation: scroll-down 1s ease-in-out infinite;
@@ -274,7 +277,7 @@ position: absolute;
   }
   .titr{
     padding: 0.0rem;
-  
+    margin-top: 1vh;
     display: flex;
     flex-direction: row;
   }
@@ -325,6 +328,7 @@ position: absolute;
   .slide-img{
     height: 450px;
     position:relative;
+    overflow: hidden;
   }
   .slide-img img{
     width:100%;
@@ -374,7 +378,7 @@ position: absolute;
     justify-content: center;
     align-items: center;
   }
-  .download{
+  /* .download{
     width:160px;
     height: 40px;
     display: flex;
@@ -386,9 +390,70 @@ position: absolute;
     letter-spacing: 1px;
     font-family: calibri;
     border-radius: 20px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    font-family: 'Vazir', Arial, Helvetica, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1); 
+    overflow: hidden;
+    position: relative;
+  } */
+  .download{
+    position: relative; 
+    padding: 0.4rem 1.2rem;
+    padding-right: 1.1rem;
+    font-weight: 700;
+    color: rgb(12, 12, 1);
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);  
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 10px;
+    user-select: none;
   }
-  .buy-btn:hover{
+  /* .download:hover{
+    background: wheat;
+    box-shadow: rgba(15, 15, 15, 0.7) 0px 5px 15px;
+  } */
+  .download:after ,.download:before{
+    content: '';
+    position: absolute; 
+    transition: inherit;
+    z-index: -1;
+  }
+  .download:hover{
+    color: rgb(250, 205, 59);
+    transition-delay: 0.5s;
+  }
+  .download:hover:after{
+    background: #0c0903;
+    border-radius: 10px;
+    transition-delay: 0.35s;
+  }
+  .download:hover::before{
+    transition-delay: 0s;
+  }
+.from-top:before,
+.from-top:after{
+left: 0;
+height: 0;
+width: 100%;
+}
+.from-top:before{
+  bottom: 0;
+  border: 1px solid #ecda72;
+  border-radius: 10px;
+  border-top: 0;
+  border-bottom: 0;
+}
+.from-top:after{
+  top: 0;
+  height: 0;
+}
+.from-top:hover:after,.from-top:hover:before{
+height: 100%;
+}
+.buy-btn:hover{
     color:#FFFFFF;
     background-color: #f15fa3;
     transition: all ease 0.3s;
@@ -398,7 +463,7 @@ position: absolute;
   }
   .slide-img:hover .overlay{
     visibility: visible;
-    animation:fade 0.5s;
+    animation:fade .5s;
   }
    
   @keyframes fade{
@@ -412,8 +477,10 @@ position: absolute;
   #slider{
     width:100%;
     height: 100vh;
-padding: 0.1rem;
-margin-bottom: 0.6rem;
+    padding: 0.0rem;
+    margin-bottom: 0.6rem;
+    position: relative;
+    direction: ltr;
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -620,4 +687,40 @@ margin-bottom: 0.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .more{
+    position: absolute;
+    left: 50%;
+    height: 50px;
+    box-sizing: border-box;
+    transform: translate(-50%, 0);
+    border: 2px solid #016161;
+    border-radius: 25px;
+    border-left: #33333300;
+    border-right: #33333300;
+    padding: 10px;
+    direction: rtl;
+    cursor: pointer;
+    vertical-align: middle;
+
+  }
+  .more span{
+    
+    vertical-align: middle;
+    max-width: 0;
+   -webkit-transition: max-width 1s;
+   transition: max-width 1s ease-in-out;
+   display: inline-block;
+   vertical-align: top;
+   white-space: nowrap;
+   overflow: hidden;
+  }
+  .more:hover span{
+    max-width: 12rem;
+  }
+  .more span::after{
+    content: url("../img/more.svg");
+  }
+  .more:hover{
+ 
   }
