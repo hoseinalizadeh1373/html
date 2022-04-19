@@ -25,7 +25,8 @@
     font-family: 'Vazir', Arial, Helvetica, sans-serif;
     line-height: 1.4;
     scroll-behavior: smooth;
-    background-image: linear-gradient(to top, #96fbc3c2 0%, #e2df913d 100%);
+    /* background-image: linear-gradient(to top, #96fbc3c2 0%, #e2df913d 100%); */
+    background: linear-gradient(to bottom right ,#0CEBEB 0%,#20E3B2 50%,#29FFC6 100%);
     direction: rtl;
   }
   
@@ -338,7 +339,7 @@ position: absolute;
   }
   .detail-box{
     width: 100%;
-  display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -735,20 +736,44 @@ height: 100%;
   #download-book{
     width: 80px;
     border: 1px solid #ec0808cc;
-    border-radius: 25px;
-    padding: 10px;
+    border-radius: 4px;
+    padding: 0.9rem;
     display: block;
     margin: 5px auto;
     text-align: center;
+    height: auto;
     position: absolute;
     bottom: 3px;
     left: 5px;
     text-decoration: none;
-    box-shadow: inset 0 0 0 yellowgreen;
+    color: #200341;
+    box-shadow: inset 0 0 0 0 yellowgreen;
     outline: none;
-    transition: box-shadow ease-in-out 1s;
+    transition:  ease-in-out 0.3s;
   }
   #download-book:hover{
-    box-shadow: inset 150px 0 0 0 yellowgreen;
-    color: #C32BAC;
+    box-shadow: inset 80px 0 0 0 yellowgreen;
+    /* color: #C32BAC; */
+  }
+  .ul-book{
+    display: flex;
+    flex-flow: column;
+    flex-direction: row;
+    align-items: center;
+    overflow: auto;
+    scroll-snap-type: proximity;
+    scroll-behavior: smooth;
+    cursor: grab;
+    user-select: none;
+   
+  }
+  ::-webkit-scrollbar{
+    width: 1px;
+    
+  }
+  ::-webkit-scrollbar-track{
+    box-shadow: 0 0 0 0 transparent;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: transparent;
   }
