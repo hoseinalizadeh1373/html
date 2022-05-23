@@ -907,3 +907,16 @@ left: 0;
     position: absolute;
     bottom: 25px;
   }
+ 
+  .effect{
+    box-shadow: 0px 5px 12px 10px rgba(163, 160, 160, 0.507);
+    transform: rotate3d(0, 0, 0, 0deg);
+    transform: perspective(1500px) rotateY(15deg);
+    border-radius: 1rem;
+    transition: transform 1s ease 0s;
+}
+
+.effect:hover{
+    transform: perspective(3000px) rotateY(5deg);
+
+}

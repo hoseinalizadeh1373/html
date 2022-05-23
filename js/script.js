@@ -58,3 +58,21 @@ function drag(str){
     // Attach the handler
     ele.addEventListener('mousedown', mouseDownHandler);
 }
+// let left = document.getElementById("left-arrow-key");
+// let right = document.getElementById("right-arrow-key");
+
+function left(str){
+    let caontainer_book = document.getElementById(str);
+   
+        caontainer_book.scrollLeft  = 0;
+        
+
+
+}
+function right(str){
+    let caontainer_book = document.getElementById(str);
+   
+   
+    
+caontainer_book.scrollLeft = -caontainer_book.scrollWidth;
+}

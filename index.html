@@ -24,9 +24,7 @@
     <link rel="stylesheet" href="css/lightslider.css" />
     <!-- <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mobile2.css"/>
   <link rel="stylesheet" media="screen and (min-width:1100px)" href="css/widescreen.css"/> -->
-    <script type="text/javascript" src="js/Jquery.js"></script>
-    <!--lightslider.js--------------->
-    <script type="text/javascript" src="js/lightslider.js"></script>
+  
     <title>مهدویت</title>
   </head>
 
@@ -97,22 +95,6 @@
           </div>
         </div>
       </section>
-
-      <!-- <nav id="navbar" class="bg-dark">
-  <h1 class="logo">
-    <a href="#">
-      <span class="text-primary">
-        MYSITE
-      </span>
-      .ir
-    </a>
-  </h1> -->
-      <!-- <ul>
-    <li><a href="#"> خانه</a></li>
-    <li> <a href="#">آرشیو صوتی</a></li>
-    <li> <a href="#">آرشیو تصویری</a></li>
-    <li> <a href="#"> تماس با ما </a></li>
-  </ul> -->
     </header>
 
     <section id="slider">
@@ -329,8 +311,8 @@
     <section id="section2">
       <div class="titr "><h5 class="btn2-grad">کتاب های مهدویت</h5></div>
       <div class="caontainer-book" id="caontainer-book">
-      <a id="right-arrow-key"><i class="bi bi-arrow-left-circle-fill fa-3x bg-transparent icon-light"></i></a>
-      <a id="left-arrow-key"><i class="bi bi-arrow-right-circle-fill fa-3x bg-transparent icon-light"></i></a>
+      <a id="right-arrow-key" onclick="right('book-list')"><i class="bi bi-arrow-left-circle-fill fa-3x bg-transparent icon-light"></i></a>
+      <a id="left-arrow-key" onclick="left('book-list')"><i class="bi bi-arrow-right-circle-fill fa-3x bg-transparent icon-light"></i></a>
       <ul id="book-list" class="ul-book " onmouseover="drag('book-list')">
         <li class="item-a">
           <div class="box-book">
@@ -405,15 +387,15 @@
       <section id="section3"  >
         <div class="titr "><h5 class="btn2-grad">صوت های مهدویت</h5></div>
         <div class="caontainer-book" id="caontainer-book">
-        <a id="left-arrow-key"><i class="bi bi-arrow-left-circle-fill fa-3x bg-transparent icon-light"></i></a>
-        <a id="right-arrow-key"><i class="bi bi-arrow-right-circle-fill fa-3x bg-transparent icon-light"></i></a>
+        <a id="right-arrow-key" onclick="right('music-list')"><i class="bi bi-arrow-left-circle-fill fa-3x bg-transparent icon-light"></i></a>
+        <a id="left-arrow-key" onclick="left('music-list')"><i class="bi bi-arrow-right-circle-fill fa-3x bg-transparent icon-light"></i></a>
         <ul id="music-list" class="ul-music" onmouseover="drag('music-list')">
           
           <li class="item-a">
            
-            <div class="card m-3 shadow box-music scroll" style="width: 540px; height: 20%;">
+            <div class="card m-3 effect " style="width: 540px; height: 20%;">
               <div class="row g-0 ">
-                <div class="col-md-4 ">
+                <div class="col-md-4 effect">
                   <img src="img/background-showcase.jpg" draggable="false" class="img-fluid rounded-start h-100" alt="...">
                 </div>
                 <div class="col-md-8">
@@ -431,7 +413,7 @@
             </div>
           </li>
           <li class="item-b">
-            <div class="card m-3" style="width: 540px; height: 20%;">
+            <div class="card m-3 effect" style="width: 540px; height: 20%;">
               <div class="row g-0 ">
                 <div class="col-md-4 ">
                   <img src="img/background-showcase.jpg" draggable="false" class="img-fluid rounded-start h-100" alt="...">
@@ -451,7 +433,7 @@
             </div>
           </li>
           <li class="item-c">
-            <div class="card m-3" style="width: 540px; height: 20%;">
+            <div class="card m-3 effect" style="width: 540px; height: 20%;">
               <div class="row g-0 ">
                 <div class="col-md-4 ">
                   <img src="img/background-showcase.jpg" draggable="false"  class="img-fluid rounded-start h-100" alt="...">
@@ -470,8 +452,8 @@
               </div>
             </div>
           </li>
-          <li class="item-c">
-            <div class="card m-3" style="width: 540px; height: 20%;">
+          <li class="item-d">
+            <div class="card m-3 effect" style="width: 540px; height: 20%;">
               <div class="row g-0 ">
                 <div class="col-md-4 ">
                   <img src="img/background-showcase.jpg" draggable="false"  class="img-fluid rounded-start h-100" alt="...">
@@ -539,7 +521,9 @@
         </div>
       </div>
     </footer>
-
+    <script type="text/javascript" src="js/Jquery.js"></script>
+    <!--lightslider.js--------------->
+    <script type="text/javascript" src="js/lightslider.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
