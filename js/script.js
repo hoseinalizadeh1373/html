@@ -8,8 +8,15 @@ $(document).ready(function() {
     });  
   });
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const ele = document.getElementById('book-list');
+
+function drag(str){
+    fundrag(str);
+}
+
+  document.addEventListener('DOMContentLoaded', fundrag(str)) ;
+  function fundrag(str)
+  {
+    const ele = document.getElementById(str);
     ele.style.cursor = 'grab';
 
     let pos = { top: 0, left: 0, x: 0, y: 0 };
@@ -50,4 +57,4 @@ $(document).ready(function() {
 
     // Attach the handler
     ele.addEventListener('mousedown', mouseDownHandler);
-});
+}

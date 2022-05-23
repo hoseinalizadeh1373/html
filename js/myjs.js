@@ -6,5 +6,5 @@ left.addEventListener('click',()=>{
     caontainer_book.scrollLeft  = 0;
 });
 right.addEventListener('click',()=>{
-caontainer_book.scrollLeft = caontainer_book.scrollWidth;
+caontainer_book.scrollLeft = -caontainer_book.scrollWidth;
 });
