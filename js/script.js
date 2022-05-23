@@ -3,12 +3,10 @@ $(document).ready(function() {
         autoWidth:true,
         loop:true,
         onSliderLoad: function() {
-            $('#autoWidth').removeClass('cS-hidden');
+            $('#autoWidth').removeClass('cs-hidden');
         } 
     });  
   });
-
-
 function drag(str){
     fundrag(str);
 }
