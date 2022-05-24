@@ -1,12 +1,12 @@
-$(document).ready(function() {
-    $('#autoWidth').lightSlider({
-        autoWidth:true,
-        loop:true,
-        onSliderLoad: function() {
-            $('#autoWidth').removeClass('cs-hidden');
-        } 
-    });  
-  });
+// $(document).ready(function() {
+//     $('#autoWidth').lightSlider({
+//         autoWidth:true,
+//         loop:true,
+//         onSliderLoad: function() {
+//             $('#autoWidth').removeClass('cs-hidden');
+//         } 
+//     });  
+//   });
 function drag(str){
     fundrag(str);
 }
