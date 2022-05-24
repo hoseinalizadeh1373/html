@@ -147,14 +147,14 @@ position: absolute;
   100%{width: 100px;height: 100px;}
 }
 
-  .cardak{
+  /* .cardak{
 
     background: yellowgreen;
     border: 1px solid #333;
     border-radius: 15px;
     padding: 1rem;
     margin: 1rem;
-  }
+  } */
   
   .bg-dark{
     background: #333;
@@ -276,7 +276,6 @@ position: absolute;
   }
   .titr{
     padding: 0.0rem;
-
     display: flex;
     flex-direction: row;
   }
@@ -323,6 +322,7 @@ position: absolute;
     border-radius: 10px;
     overflow: hidden;
     margin:12px;
+    background: transparent;
   }
   .slide-img{
     height: 450px;
@@ -474,9 +474,18 @@ height: 100%;
     cursor: grab;
     user-select: none;
     z-index: 0;
+    background: transparent;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-x: scroll; 
   }
+  .cs-hidden::-webkit-scrollbar,.ul-book::-webkit-scrollbar,.ul-music::-webkit-scrollbar{
+    display: none;
+  }
+ 
   .cs-hidden li{
     list-style: none;
+    background: rgba(0, 0, 0, 0.0);
   }
   #navbar{
     display: flex;
@@ -648,6 +657,8 @@ height: 100%;
     direction: rtl;
     cursor: pointer;
     vertical-align: middle;
+  
+    
 
   }
   .more span{
@@ -671,7 +682,7 @@ height: 100%;
     width:100%;
     height: 50vh;
     padding: 0.0rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.1rem;
     position: relative;
    
   }
@@ -701,7 +712,6 @@ height: 100%;
     border: 5px solid transparent;
     box-shadow: inset 0px 1px 1px 0px #0c0903;
     /* box-shadow: 10px 0 5px -2px rgb(12, 11, 11); */
-
     cursor: pointer;
     width: 40%;
     height: 40%;
@@ -757,24 +767,33 @@ height: 100%;
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+    
     scroll-snap-type: proximity;
     scroll-behavior: smooth;
     cursor: grab;
     user-select: none;
     z-index: 0;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-x: scroll; 
    
   }
   .ul-music{
     display: flex;
     flex-flow: column;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
+    
     overflow: hidden;
     scroll-snap-type: proximity;
     scroll-behavior: smooth;
     cursor: grab;
     user-select: none;
     z-index: 100;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-x: scroll; 
+   
 
   }
 
@@ -910,7 +929,7 @@ left: 0;
   }
   .more-book{
     position: absolute;
-    bottom: 25px;
+    bottom: 5px;
   }
  
   .effect{
@@ -923,5 +942,11 @@ left: 0;
 
 .effect:hover{
     transform: perspective(3000px) rotateY(5deg);
+}
 
+.card{
+  
+  width: 540px;
+  height: 20%;
+  
 }

@@ -7,6 +7,9 @@
 //         } 
 //     });  
 //   });
+
+
+
 function drag(str){
     fundrag(str);
 }
