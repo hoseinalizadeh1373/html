@@ -687,8 +687,9 @@ height: 100%;
     width:100%;
     height: 50vh;
     padding: 0.0rem;
-    margin-bottom: 0.0rem;
+    margin-bottom: 0.1rem;
     position: relative;
+    overflow: hidden;
    
   }
   #section2 ul ,#section3 ul{
@@ -793,15 +794,30 @@ height: 100%;
     top: -4px;
     margin: 0;
     padding-bottom: 0;
+    height: auto;
+  }
+  #section2 .titr .btn2-grad ,#section3 .titr .btn2-grad {
+    margin: 5px;
+    padding: 10px 35px;
+    font-size:small;
+  }
+  #section2{
+    
+    height: 52vh;
+  }
+  #section3{
+    height: 48vh;
+    
   }
   .ul-book .more{
     position: absolute;
-    bottom: -35px;
+    bottom: -30px;
     margin: 0px;
+    
     height: 40px;
-font-size: smaller;
-padding: 10px 10px;
-font-weight: 600;
+    font-size: smaller;
+    padding: 10px 10px;
+    font-weight: 600;
   }
   .ul-book li{
     position: relative;
@@ -831,11 +847,11 @@ font-weight: 600;
   
   .ul-music li{
     position: relative;
-    top: 0px;
+    top: -10px;
   }
   .ul-music .more{
 position: absolute;
-bottom: -15px;
+bottom: -5px;
 margin: 10px;
 height: 40px;
 font-size: smaller;
@@ -845,7 +861,7 @@ font-weight: 600;
   #section3 .titr{
     position: relative;
     bottom: -15px;
-    
+    top: 2px;
   }
   .detail{
     position: absolute;
