@@ -650,6 +650,7 @@ height: 100%;
     direction: rtl;
     cursor: pointer;
     vertical-align: middle;
+    text-align: center;
   }
   .more span{
     
