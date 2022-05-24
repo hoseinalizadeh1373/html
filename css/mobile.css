@@ -8,7 +8,9 @@
         align-items: flex-start;
         justify-content: flex-start;
         align-content: flex-start;
-        
+    }
+    #slider ul {
+        margin-right: 3px;
     }
     .slide-img{
         height: 300px;
