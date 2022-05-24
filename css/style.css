@@ -28,6 +28,7 @@
     /* background-image: linear-gradient(to top, #96fbc3c2 0%, #e2df913d 100%); */
     background: linear-gradient(to bottom right ,#0CEBEB 0%,#20E3B2 50%,#29FFC6 100%);
     direction: rtl;
+    overflow-x: hidden;
   }
   
   a {
@@ -47,23 +48,7 @@
     scroll-behavior: smooth;
     
   }
-  /* .card{
-    scroll-behavior: smooth;
-    align-items: center;
-    max-width: 1100px;
-    overflow: hidden;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-y: hidden;
-    padding: 1rem;
-    pointer-events: none;
-  }
-  .card::after{
-    content: 'more ';
-    max-width: 50px;
-    height: 20px;
-  } */
+
   .cont{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -241,7 +226,7 @@ position: absolute;
     height: 50px;
     border: 2px solid rgb(12, 160,255);
     position: absolute;
-    bottom: 25px;
+    bottom: 20px;
     left: 50%;
     border-radius: 50px;
     cursor: pointer;

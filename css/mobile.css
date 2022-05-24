@@ -1,23 +1,33 @@
 @media (max-width:500px)  {
     .box{
         width: 200px;
-    
     }
     .cs-hidden{
         align-items: flex-start;
         justify-content: flex-start;
         align-content: flex-start;
+        overflow: hidden;
     }
     #slider ul {
         margin-right: 3px;
     }
     .slide-img{
         height: 300px;
-        
     }
     .box-book{
         margin: 10px;
+        
     }
+    #slider .more{
+        
+        text-align: center;
+          }
+    #slider .scroll-down{
+        
+            position: absolute;
+            bottom: 5px;
+        
+          }
     .top-item img{
         border: 5px solid transparent;
         box-shadow: inset 0px 1px 1px 0px #0c0903;
@@ -89,5 +99,18 @@
         border-radius: 50px;
         cursor: pointer;
     }
+    #section2 ul{
+        margin-top: 0px;
+        padding: 0px;
+      }
+      .box-book{
+        position: relative;
+        margin: 10px;
+        top: 10px;
+      }
+      #section2 .more{
+          position: absolute;
+          bottom: 3px;
+      }
 }
 
