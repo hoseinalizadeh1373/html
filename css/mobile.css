@@ -22,11 +22,9 @@
         
         text-align: center;
           }
-    #slider .scroll-down{
-        
+    #slider .scroll-down{ 
             position: absolute;
             bottom: 5px;
-        
           }
     .top-item img{
         border: 5px solid transparent;
