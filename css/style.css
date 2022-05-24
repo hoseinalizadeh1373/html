@@ -241,7 +241,7 @@ position: absolute;
     height: 50px;
     border: 2px solid rgb(12, 160,255);
     position: absolute;
-    bottom: 5px;
+    bottom: 25px;
     left: 50%;
     border-radius: 50px;
     cursor: pointer;
@@ -604,7 +604,7 @@ height: 100%;
     }
    
     #sec-1 {
-      min-height: 100vh;
+      min-height: 90vh;
       width: 100%;
       position: relative;
       display: flex;

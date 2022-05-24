@@ -1,8 +1,7 @@
-@media (max-width:500px){
-
-
+@media (max-width:500px)  {
     .box{
         width: 200px;
+    
     }
     .cs-hidden{
         align-items: flex-start;
@@ -83,6 +82,12 @@
     .scroll-down{
         width: 30px;
         height: 30px;
+        border: 2px solid rgb(12, 160,255);
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        border-radius: 50px;
+        cursor: pointer;
     }
 }
 
