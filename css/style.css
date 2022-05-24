@@ -480,7 +480,7 @@ height: 100%;
     padding-right: 0px;
     margin-right: 0px;
   }
-  #navbar{
+  /* #navbar{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -489,14 +489,14 @@ height: 100%;
     z-index: 1;
     position: absolute;
     width: 100%;
-  }
+  } */
   
-  #navbar a{
+  /* #navbar a{
     color: white
   }
   #navbar ul{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;ب
     align-items: center;
     list-style: none;
   }
@@ -510,7 +510,7 @@ height: 100%;
     background: orange;
     color: white;
     border-radius: 5px;
-  }
+  } */
   
   #showcase{
     /* background: #333 url('../img/showcase.jpg') no-repeat center center/cover; */
@@ -793,7 +793,9 @@ height: 100%;
   }
   #section3{
     height: 48vh;
-    
+  }
+  #section3 ul{
+    margin-right: -50px;
   }
   .ul-book .more{
     position: absolute;

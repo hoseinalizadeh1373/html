@@ -1,4 +1,8 @@
 @media (max-width:500px)  {
+    .mobile-height{
+        height: 50vh;
+    }
+    
     .box{
         width: 200px;
     }
@@ -22,6 +26,7 @@
         
         text-align: center;
           }
+
     #slider .scroll-down{ 
             position: absolute;
             bottom: 5px;
