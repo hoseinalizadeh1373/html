@@ -4,8 +4,15 @@
     .box{
         width: 200px;
     }
+    .cs-hidden{
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-content: flex-start;
+        
+    }
     .slide-img{
         height: 300px;
+        
     }
     .box-book{
         margin: 10px;
@@ -65,6 +72,15 @@
           background: transparent;
           width: 100%;
       }
-    
+    .more{
+        font-size: smaller;
+        bottom: 40px;
+        height:40px;
+        width: 135px;
+    }
+    .scroll-down{
+        width: 30px;
+        height: 30px;
+    }
 }
 

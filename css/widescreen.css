@@ -1,11 +1,31 @@
-#section1 .items .item{
-    display: flex;
-    flex-direction: row-reverse;
-    text-align: right;
-}
 
-#section1 .items .item i{
-    margin-left: 1.3rem;
-    align-self: center;
-    margin-bottom: 0;
+.cs-hidden{
+    background: red;
 }
+  .top-item img{
+    
+    width: 40%;
+    height: 10%;
+    border: 1px;
+    padding: 1px;
+  }
+ 
+  
+  
+  .btn2-grad {
+    margin: 5px;
+    padding: 12px 32px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px rgb(215, 180, 243);
+    border-radius: 10px;
+    display: block;
+    border-radius: 25px;
+    font-weight: 200;
+    font-size: medium;
+    
+  }
+  

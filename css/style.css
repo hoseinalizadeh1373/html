@@ -317,21 +317,22 @@ position: absolute;
   }
 
   .box{
-    width:300px;
+    width:250px;
     box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
     border-radius: 10px;
     overflow: hidden;
-    margin:12px;
+    margin:1px;
+    
     background: transparent;
   }
   .slide-img{
-    height: 450px;
+    height: 50vh;
     position:relative;
     overflow: hidden;
   }
   .slide-img img{
     width:100%;
-    height: 100%;
+    height: 95%;
     object-fit: cover;
     box-sizing: border-box;
   }
@@ -469,8 +470,11 @@ height: 100%;
     width: 100%;
     height: auto;
     overflow: hidden;
+
     scroll-snap-type: proximity;
     scroll-behavior: smooth;
+    align-items: center;
+    justify-content: center;
     cursor: grab;
     user-select: none;
     z-index: 0;
@@ -486,6 +490,10 @@ height: 100%;
   .cs-hidden li{
     list-style: none;
     background: rgba(0, 0, 0, 0.0);
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0px;
+    margin-right: 0px;
   }
   #navbar{
     display: flex;
@@ -657,9 +665,6 @@ height: 100%;
     direction: rtl;
     cursor: pointer;
     vertical-align: middle;
-  
-    
-
   }
   .more span{
     
@@ -682,17 +687,23 @@ height: 100%;
     width:100%;
     height: 50vh;
     padding: 0.0rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.0rem;
     position: relative;
    
   }
   #section2 ul ,#section3 ul{
-    list-style: none  ;
+    list-style: none;
+    
+  }
+  #section2 ul{
+    margin-top: -5px;
+    padding: 0px;
   }
   
   .box-book{
     position: relative;
     margin: 20px;
+    
     background-image: linear-gradient( 135deg, #FF96F9 10%, #C32BAC 100%);
     display: flex;
     flex-direction: column;
@@ -767,7 +778,6 @@ height: 100%;
     flex-direction: row;
     align-items: center;
     overflow: hidden;
-    
     scroll-snap-type: proximity;
     scroll-behavior: smooth;
     cursor: grab;
@@ -778,11 +788,35 @@ height: 100%;
     overflow-x: scroll; 
    
   }
+  #section2 .titr{
+    position: relative;
+    top: -4px;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .ul-book .more{
+    position: absolute;
+    bottom: -35px;
+    margin: 0px;
+    height: 40px;
+font-size: smaller;
+padding: 10px 10px;
+font-weight: 600;
+  }
+  .ul-book li{
+    position: relative;
+    top: -15px;
+    margin-top: -3px;
+    padding: 0;
+    margin-bottom: 500px;
+  }
   .ul-music{
     display: flex;
     flex-flow: column;
     flex-direction: row;
     align-items: flex-start;
+    
+    gap: 0px;
     
     overflow: hidden;
     scroll-snap-type: proximity;
@@ -793,63 +827,32 @@ height: 100%;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-x: scroll; 
-   
-
-  }
-
-  .box-music{
-    position: relative;
-    margin: 20px;
-    /* background-image: linear-gradient( 135deg, #FF96F9 10%, #C32BAC 100%); */
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 40%;
-    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
   }
   
-  .top-item-music{
-    /* border: 2px solid #eeebe68c; */
-    display: flex;
-    justify-content: center;
+  .ul-music li{
     position: relative;
-
+    top: 0px;
   }
-  .top-item-music-img{
-    /* border: 5px solid transparent; */
-    box-shadow: inset 0px 1px 1px 0px #0c0903;
-    /* box-shadow: 10px 0 5px -2px rgb(12, 11, 11); */
-    margin: 20px;
-    cursor: pointer;
-    width:90%;
-    background-size: cover;
+  .ul-music .more{
+position: absolute;
+bottom: -15px;
+margin: 10px;
+height: 40px;
+font-size: smaller;
+padding: 10px 10px;
+font-weight: 600;
+  }
+  #section3 .titr{
+    position: relative;
+    bottom: -15px;
     
-    padding: 0px;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    transition: all ease-in-out 1s;
-    position: relative;
-    z-index: 0;
-  }
-  .top-item-music-img img{
-    background-position: center;
-    width: 100%;
-    height: 100%;
   }
   .detail{
     position: absolute;
     bottom: 0;
     left: 10px;
   }
-  .type-music{
-      display: flex;
-      flex-direction: column;
-      justify-content: right;
-      align-items: flex-end;
-      position: relative;
-  }
-  .type-music span{
-    margin: 5px;
-  }
+  
   ::-webkit-scrollbar{
     width: 5px;
     border-radius: 20px;
@@ -943,10 +946,14 @@ left: 0;
 .effect:hover{
     transform: perspective(3000px) rotateY(5deg);
 }
-
+.img-music{
+  height: 100%;
+}
 .card{
   
   width: 540px;
   height: 20%;
-  
+  padding: 0;
+  margin: 0;
+  top: 0;
 }
