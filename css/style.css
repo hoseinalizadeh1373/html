@@ -798,7 +798,7 @@ height: 100%;
   }
   .ul-book .more{
     position: absolute;
-    bottom: -30px;
+    top: 70%;
     margin: 0px;
     
     height: 40px;
@@ -838,7 +838,7 @@ height: 100%;
   }
   .ul-music .more{
 position: absolute;
-bottom: -5px;
+top: 70%;
 margin: 10px;
 height: 40px;
 font-size: smaller;

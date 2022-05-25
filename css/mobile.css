@@ -32,12 +32,12 @@
           }
     #slider .more{
         text-align: center;
-        bottom: 50px;
+       top: 70%;
           }
 
     #slider .scroll-down{ 
             position: absolute;
-            bottom: 5px;
+           top: 80%;
           }
     .top-item img{
         border: 5px solid transparent;
@@ -119,9 +119,13 @@
         margin: 10px;
         top: 10px;
       }
-      #section2 .more{
+      .ul-book .more{
           position: absolute;
-          bottom: 3px;
+         top: 82%;
+      }
+      .ul-music .more{
+          position: absolute;
+          top: 72%;
       }
       .slide-img{
           height: 35vh;
