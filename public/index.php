@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html dir="rtl" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Welcome to the First Site" />
-    <meta name="keywords" content="مهدویت ، آخرالزمان" />
-    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon" />
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />-->
-    <script
-      src="https://kit.fontawesome.com/9113ad631a.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-+qdLaIRZfNu4cVPK/PxJJEy0B0f3Ugv8i482AKY7gwXwhaCroABd086ybrVKTa0q"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet"   href="css/mobile.css"/>
-    <!-- <link rel="stylesheet" media="screen and (min-width:1100px)" href="css/widescreen.css"/> -->
-  
-    <title>مهدویت</title>
-  </head>
+<?php
+require("../loader.php");
 
-  <body>
+$layout = new layout();
+$layout->pageheader();
+
+?>
     <header id="showcase">
       <section id="sec-1">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="navbar">
@@ -385,57 +362,6 @@
         </ul>
       </div>
       </section>
-
-    
-    <!-- <div class="conn">
-      <div class="a11"></div>
-      <div class="a22"></div>
-    </div>
-    
-    <section id="contact" class="py-2">
-      <div class="contact-form">
-        <h2 class="m-heading">ارتباط با ما</h2>
-        <form action="#">
-          <div class="form-group">
-            <label for="name">نام</label>
-            <input type="text" />
-          </div>
-          <div class="form-group">
-            <label for="email">ایمیل</label>
-            <input type="text" />
-          </div>
-          <div class="form-group">
-            <label for="name">شماره تماس</label>
-            <input type="text" />
-          </div>
-          <div class="form-group">
-            <label for="name">پیام</label>
-            <textarea></textarea>
-          </div>
-          <button class="btn" type="submit">ارسال</button>
-        </form>
-      </div>
-    </section> -->
-
-    <footer class="bg-dark py-2">
-      <div id="main-footer" class="container">
-        <div>
-          <p>Copyright &copy; 2019</p>
-        </div>
-        <div>
-          <i class="fab fa-instagram fa-2x"></i>
-          <i class="fab fa-telegram fa-2x"></i>
-          <i class="fab fa-twitter fa-2x"></i>
-          <i class="fab fa-youtube fa-2x"></i>
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    
-  </body>
-</html>
+   <?php
+      $layout->pagefooter();
+ 
