@@ -220,13 +220,14 @@ position: absolute;
   .py-1{padding: 1.25rem 0 }
   .py-2{padding: 2rem 0 }
   .py-3{padding: 3rem 0 }
-  
+
+ 
   .scroll-down{
     width: 30px;
     height: 50px;
     border: 2px solid rgb(12, 160,255);
     position: absolute;
-    bottom: 20px;
+    top: 90%;
     left: 50%;
     border-radius: 50px;
     cursor: pointer;
@@ -539,17 +540,15 @@ height: 100%;
     z-index: 0;
     height:70vh;
     width: 100%;
-   
     }
- 
      .showcase_img .img{
        width: 35%;
-     max-width: 100%;
-  position: absolute;
-  height:90%;
-    display: block;
-    top: 20px;
-    animation: img_anim 3s;
+      max-width: 100%;
+      position: absolute;
+      height:90%;
+      display: block;
+      top: 20px;
+      animation: img_anim 3s;
     }
   .showcase_img .img2 {
     max-width: 100%;

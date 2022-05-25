@@ -1,13 +1,16 @@
-// $(document).ready(function() {
-//     $('#autoWidth').lightSlider({
-//         autoWidth:true,
-//         loop:true,
-//         onSliderLoad: function() {
-//             $('#autoWidth').removeClass('cs-hidden');
-//         } 
-//     });  
-//   });
 
+let navbar = document.getElementById("navbar");
+navbar.addEventListener('click',()=>{
+let a = document.getElementById("showcase_img");
+let scroll = document.getElementById("scroll-down");
+    if(a.classList.contains('click')){
+        a.classList.remove('click');
+        scroll.classList.remove('scroll-down-pos');
+        return;
+    }
+ a.classList.add('click');
+ scroll.classList.add('scroll-down-pos');
+});
 
 
 function drag(str){
