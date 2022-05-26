@@ -447,6 +447,7 @@ height: 100%;
     width:100%;
     height: 100vh;
     margin-right: 0px;
+    margin-left: 10px;
     position: relative;
     direction: rtl;
   }
@@ -476,48 +477,14 @@ height: 100%;
   .cs-hidden li{
     list-style: none;
     background: rgba(0, 0, 0, 0.0);
-    margin-left: auto;
-    margin-right: auto;
+
+    margin-left: 10px;
     padding-right: 0px;
     margin-right: 0px;
   }
-  /* #navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-  } */
-  
-  /* #navbar a{
-    color: white
-  }
-  #navbar ul{
-    display: flex;
-    flex-direction: row-reverse;ب
-    align-items: center;
-    list-style: none;
-  }
-  
-  #navbar ul li a {
-    padding: 0.75rem;
-    margin: 0 0.25rem;
-  }
-  
-  #navbar ul li a:hover {
-    background: orange;
-    color: white;
-    border-radius: 5px;
-  } */
+
   
   #showcase{
-    /* background: #333 url('../img/showcase.jpg') no-repeat center center/cover; */
-    /* background:  linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% ); */
-    /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
-    /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
     background: url('../img/background-showcase.jpg') no-repeat center center/cover;
     height: 100vh;
     position: relative;
@@ -535,8 +502,6 @@ height: 100%;
   }
   .showcase_img {
     position: relative;
-    direction: rtl;
-    /* flex-direction: column; */
     z-index: 0;
     height:70vh;
     width: 100%;
@@ -595,18 +560,7 @@ height: 100%;
       flex-direction: column;
       flex-wrap: wrap;
       flex: 100%;
-      
-     
     }
-    /* .slider{
-      width:100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* background: linear-gradient(5deg, #00dca3, #ffffff);
-      position: relative; 
-    }   */
   #contact{
     display: flex;
     justify-content: center;
@@ -776,7 +730,7 @@ height: 100%;
   }
   #section2 .titr{
     position: relative;
-    top: -4px;
+    top: -2px;
     margin: 0;
     padding-bottom: 0;
     height: auto;
@@ -798,7 +752,7 @@ height: 100%;
   }
   .ul-book .more{
     position: absolute;
-    top: 68%;
+    top: 80%;
     margin: 0px;
     
     height: 40px;
@@ -838,7 +792,7 @@ height: 100%;
   }
   .ul-music .more{
 position: absolute;
-bottom: -5px;
+top: 80%;
 margin: 10px;
 height: 40px;
 font-size: smaller;
