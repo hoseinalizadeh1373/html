@@ -1,62 +1,17 @@
 <?php
 require("../loader.php");
+load_models("video");
+$video_list = new video();
+$result_video =$video_list->SelectFromTable();
+
+
 
 $layout = new layout();
 $layout->pageheader();
 
 ?>
-    <header id="showcase">
-      <section id="sec-1">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="navbar">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">صفحه اصلی</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">آرشیو تصویری</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link " href="#" >آرشیو صوتی</a>
-                </li>
-                <li class="nav-item">  
-                  <a class="nav-link " href="#" >کتابخانه</a>
-                </li>
-                
-                <li class="nav-item">  
-                  <a class="nav-link " href="#" >ارتباط با ما</a>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-2 input-text" type="search" placeholder="جستجو" aria-label="Search">
-                <button class="btn btn-outline-success button-effect" type="submit">جستجو</button>
-              </form>
-            </div>
-          </div>
-        </nav>
-        <div class="container-scroll">
-          <a href="#slider">
-            <div class="scroll-down" id="scroll-down"></div>
-          </a>
-          <div class="showcase-content">
-            <div>
-              <div class="showcase_img" id="showcase_img">
-                <img src="img/sallalah2.png" class="img" />
-                <img src="img/abasaleh (2).png" class="img2" />
-                <img src="img/almahdi2.png" class="img3" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-
+  
+<main>
     <section id="slider" >
       <div class="titr"><h3 class="btn2-grad">ویدیوهای مهدویت</h3></div>
      <a id="left-arrow-key" style="top: 32%;" onclick="left('ul-video')">  <i class="bi bi-arrow-right-circle fa-3x "></i></a>
@@ -362,6 +317,7 @@ $layout->pageheader();
         </ul>
       </div>
       </section>
+      </main>
    <?php
       $layout->pagefooter();
  
