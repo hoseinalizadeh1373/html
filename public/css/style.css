@@ -319,31 +319,41 @@ position: absolute;
   .slide-img img{
     width:100%;
     height: 95%;
-    object-fit: cover;
+    object-fit:fill;
     box-sizing: border-box;
   }
   .detail-box{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    width: 100%;  
+    padding: 25px 18px;
     box-sizing: border-box;
-    font-family: calibri;
+    font-family: "Vazir";
+    position: relative;
   }
   .type{
+    position: absolute;
+   top: 0;
+
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .type a{
     color:#222222;
-    margin: 5px 0px;
+    margin: 1px 0px;
     font-weight: 700;
+    font-size: medium;
     letter-spacing: 0.5px;
     padding-right: 8px;
   }
   .type span{
-    color:rgba(26,26,26,0.5);
+    color:rgba(26,26,26,0.5);    
+    writing-mode: sideways-rl;
+    text-overflow: clip;
+   display: -webkit-box;
+   -webkit-line-clamp:1; /* number of lines to show */
+   -webkit-box-orient: vertical;
+    
   }
   .price{
     color: #333333;
@@ -450,6 +460,7 @@ height: 100%;
     margin-left: 10px;
     position: relative;
     direction: rtl;
+    
   }
   .cs-hidden{
     display: flex;
@@ -460,8 +471,8 @@ height: 100%;
 
     scroll-snap-type: proximity;
     scroll-behavior: smooth;
-    align-items: center;
-    justify-content: center;
+    align-items: baseline;
+    justify-content: right;
     cursor: grab;
     user-select: none;
     z-index: 0;
@@ -477,7 +488,6 @@ height: 100%;
   .cs-hidden li{
     list-style: none;
     background: rgba(0, 0, 0, 0.0);
-
     margin-left: 10px;
     padding-right: 0px;
     margin-right: 0px;
@@ -689,6 +699,7 @@ height: 100%;
   }
   .type-book span{
     margin: 5px;
+    
   }
   #download-book{
     width: 80px;

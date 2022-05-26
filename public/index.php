@@ -1,11 +1,18 @@
 <?php
 require("../loader.php");
 load_models("video");
+load_models("book");
 $video_list = new video();
-$result_video =$video_list->SelectFromTable();
+$result_video =$video_list->SelectFromTable(6);
 
+$book_list = new book();
+$result_book =$book_list->SelectFromTable(6);
 
-
+/**
+ * 
+ * 
+ * 
+ */
 $layout = new layout();
 $layout->pageheader();
 
@@ -17,131 +24,38 @@ $layout->pageheader();
      <a id="left-arrow-key" style="top: 32%;" onclick="left('ul-video')">  <i class="bi bi-arrow-right-circle fa-3x "></i></a>
      <a id="right-arrow-key" style="top: 32%;" onclick="right('ul-video')">  <i class="bi bi-arrow-left-circle fa-3x "></i></a>
       <ul id="ul-video" class="cs-hidden" onmouseover="drag('ul-video')" >
-        <!--1------------------------------------>
+
+      <?php 
+      while ($row = mysqli_fetch_assoc($result_video)){
+        ?>
         <li class="item-a">
-          <!--box-slider--------------->
-          <div class="box">
-            <!--img-box---------->
-            <div class="slide-img">
-              <img alt="8" src="img/raefi.jpg" />
-              <!--overlayer---------->
-              <div class="overlay">
-                <!--buy-btn------>
-                <a href="#" class="download from-top">دانلود</a>
-              </div>
-            </div>
-            <!--detail-box--------->
-            <div class="detail-box">
-              <!--type-------->
-              <div class="type">
-                <a href="#">Rabbed Cardigan</a>
-                <span>Noe Arrival</span>
-              </div>
-              <!--price-------->
-              <a href="#" class="price">$23</a>
+        <!--box-slider--------------->
+        <div class="box">
+          <!--img-box---------->
+          <div class="slide-img">
+            <img alt="8" src="<?php echo $row['img']?>" />
+            <!--overlayer---------->
+            <div class="overlay">
+              <!--buy-btn------>
+              <a href="<?php echo $row['link']?>  " class="download from-top">دانلود</a>
             </div>
           </div>
-        </li>
-        <!--2------------------------------------>
-        <li class="item-b">
-          <!--box-slider--------------->
-          <div class="box">
-            <!--img-box---------->
-            <div class="slide-img">
-              <img alt="8" src="img/raefi.jpg" />
-              <!--overlayer---------->
-              <div class="overlay">
-                <!--buy-btn------>
-                <a href="#" class="download from-top">دانلود</a>
-              </div>
+          <!--detail-box--------->
+          <div class="detail-box">
+            <!--type-------->
+            <div class="type">
+              <a href="#"><?php echo $row['title']?></a>
+              <span><?php echo $row['descrip']?></span>
             </div>
-            <!--detail-box--------->
-            <div class="detail-box">
-              <!--type-------->
-              <div class="type">
-                <a href="#">Rabbed Cardigan</a>
-                <span>Noe Arrival</span>
-              </div>
-              <!--price-------->
-              <a href="#" class="price">$20</a>
-            </div>
+            <!--price-------->
+           
           </div>
-        </li>
-        <!--3------------------------------------>
-        <li class="item-c">
-          <!--box-slider--------------->
-          <div class="box">
-            <!--img-box---------->
-            <div class="slide-img">
-              <img alt="8" src="img/raefi.jpg" />
-              <!--overlayer---------->
-              <div class="overlay">
-                <!--buy-btn------>
-                <a href="#" class="download from-top">دانلود</a>
-              </div>
-            </div>
-            <!--detail-box--------->
-            <div class="detail-box">
-              <!--type-------->
-              <div class="type">
-                <a href="#">Rabbed Cardigan</a>
-                <span>Noe Arrival</span>
-              </div>
-              <!--price-------->
-              <a href="#" class="price">$26</a>
-            </div>
-          </div>
-        </li>
-        <!--4------------------------------------>
-        <li class="item-d">
-          <!--box-slider--------------->
-          <div class="box">
-            <!--img-box---------->
-            <div class="slide-img">
-              <img alt="8" src="img/raefi.jpg" />
-              <!--overlayer---------->
-              <div class="overlay">
-                <!--buy-btn------>
-                <a href="#" class="download from-top">دانلود</a>
-              </div>
-            </div>
-            <!--detail-box--------->
-            <div class="detail-box">
-              <!--type-------->
-              <div class="type">
-                <a href="#">Rabbed Cardigan</a>
-                <span>Noe Arrival</span>
-              </div>
-              <!--price-------->
-              <a href="#" class="price">$27</a>
-            </div>
-          </div>
-        </li>
-           <!--4------------------------------------>
-           <li class="item-e">
-            <!--box-slider--------------->
-            <div class="box">
-              <!--img-box---------->
-              <div class="slide-img">
-                <img alt="8" src="img/raefi.jpg" />
-                <!--overlayer---------->
-                <div class="overlay">
-                  <!--buy-btn------>
-                  <a href="#" class="download from-top">دانلود</a>
-                </div>
-              </div>
-              <!--detail-box--------->
-              <div class="detail-box">
-                <!--type-------->
-                <div class="type">
-                  <a href="#">Rabbed Cardigan</a>
-                  <span>Noe Arrival</span>
-                </div>
-                <!--price-------->
-                <a href="#" class="price">$27</a>
-              </div>
-            </div>
-          </li>
+        </div>
+      </li>
+<?php
+      }
+?>      
+ 
       </ul>
       <div class="more">ویدیوهای بیشتر<span> </span></div>
       <a href="#section2">
@@ -155,19 +69,26 @@ $layout->pageheader();
       <a id="right-arrow-key" onclick="right('book-list')"><i class="bi bi-arrow-left-circle fa-3x   "></i></a>
       <a id="left-arrow-key" onclick="left('book-list')"><i class="bi bi-arrow-right-circle fa-3x  "></i></a>
       <ul id="book-list" class="ul-book " onmouseover="drag('book-list')">
+      <?php 
+      while ($row_book = mysqli_fetch_assoc($result_book)){
+        ?>
         <li class="item-a">
           <div class="box-book">
             <div class="top-item">
-              <img src="img/b3.jpg" draggable="false" id="imm" alt="کتاب مهدویت" />
+              <img src="<?php echo $row_book['img']?>" draggable="false" id="imm" alt="کتاب مهدویت" />
             </div>
             <div class="type-book">
-              <span>کتاب رستاخیز</span>
-              <span>نوشته : آیت الله دستغیب</span>
+              <span><?php echo $row_book['title']?></span>
+              <span><?php echo $row_book['author']?></span>
 
-              <a href="#" id="download-book">دانلود</a>
+              <a href="<?php echo $row_book['link'] ?>" id="download-book" target="_blank"> <?php echo $row_book['type'] =="الکترونیک"?"دانلود":" چاپی"; ?></a>
             </div>
           </div>
         </li>
+<?php
+      }
+      ?>
+<!-- 
         <li class="item-b">
           <div class="box-book">
             <div class="top-item">
@@ -220,7 +141,7 @@ $layout->pageheader();
               <a href="#" id="download-book">دانلود</a>
             </div>
           </div>
-        </li>
+        </li> -->
         <div class="more more-book">کتاب های بیشتر<span> </span></div>
       </ul>
     </div>
