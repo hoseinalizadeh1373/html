@@ -2,12 +2,16 @@
 require("../loader.php");
 load_models("video");
 load_models("book");
+load_models("music");
+
 $video_list = new video();
 $result_video =$video_list->SelectFromTable(6);
 
 $book_list = new book();
 $result_book =$book_list->SelectFromTable(6);
 
+$music_list =new music();
+$result_music = $music_list->SelectFromTable(6);
 /**
  * 
  * 
@@ -55,9 +59,9 @@ $layout->pageheader();
 <?php
       }
 ?>      
- 
+  <div class="more">ویدیوهای بیشتر<span> </span></div>
       </ul>
-      <div class="more">ویدیوهای بیشتر<span> </span></div>
+     
       <a href="#section2">
         <div class="scroll-down"></div>
       </a>
@@ -81,67 +85,13 @@ $layout->pageheader();
               <span><?php echo $row_book['title']?></span>
               <span><?php echo $row_book['author']?></span>
 
-              <a href="<?php echo $row_book['link'] ?>" id="download-book" target="_blank"> <?php echo $row_book['type'] =="الکترونیک"?"دانلود":" چاپی"; ?></a>
+              <a href="<?php echo $row_book['link'] ?>" id="download-book" target="_blank"> <?php echo $row_book['type']  ?></a>
             </div>
           </div>
         </li>
 <?php
       }
       ?>
-<!-- 
-        <li class="item-b">
-          <div class="box-book">
-            <div class="top-item">
-              <img src="img/b3.jpg" draggable="false" id="imm" alt="کتاب مهدویت" />
-            </div>
-            <div class="type-book">
-              <span>کتاب رستاخیز</span>
-              <span>نوشته : آیت الله دستغیب</span>
-
-              <a href="#" id="download-book">دانلود</a>
-            </div>
-          </div>
-        </li>
-        <li class="item-c">
-          <div class="box-book">
-            <div class="top-item">
-              <img src="img/b3.jpg" draggable="false" id="imm" alt="کتاب مهدویت" />
-            </div>
-            <div class="type-book">
-              <span>کتاب رستاخیز</span>
-              <span>نوشته : آیت الله دستغیب</span>
-
-              <a href="#" id="download-book">دانلود</a>
-            </div>
-          </div>
-        </li>
-        <li class="item-d">
-          <div class="box-book">
-            <div class="top-item">
-              <img src="img/b3.jpg" draggable="false" id="imm" alt="کتاب مهدویت" />
-            </div>
-            <div class="type-book">
-              <span>کتاب رستاخیز</span>
-              <span>نوشته : آیت الله دستغیب</span>
-
-              <a href="#" id="download-book">دانلود</a>
-            </div>
-          </div>
-        </li>
-        <li class="item-e">
-          <div class="box-book">
-            <div class="top-item">
-       
-              <img src="img/b3.jpg" draggable="false" id="imm" alt="کتاب مهدویت" />
-            </div>
-            <div class="type-book">
-              <span>کتاب رستاخیز</span>
-              <span>نوشته : آیت الله دستغیب</span>
-
-              <a href="#" id="download-book">دانلود</a>
-            </div>
-          </div>
-        </li> -->
         <div class="more more-book">کتاب های بیشتر<span> </span></div>
       </ul>
     </div>
@@ -152,88 +102,36 @@ $layout->pageheader();
         <a id="right-arrow-key" onclick="right('music-list')"><i class="bi bi-arrow-left-circle fa-3x"></i></a>
         <a id="left-arrow-key" onclick="left('music-list')"><i class="bi bi-arrow-right-circle fa-3x"></i></a>
         <ul id="music-list" class="ul-music" onmouseover="drag('music-list')">
-          
+        <?php
+           while ($row_music = mysqli_fetch_assoc($result_music)){
+             
+             ?>
           <li class="item-a" >
-           
+        
             <div class=" card m-3 effect " >
               <div class="row g-0 ">
                 <div class="col-md-4  ">
-                  <img src="img/background-showcase.jpg" draggable="false" class="img-fluid rounded-start  img-music" alt="...">
+                  <img src="<?php echo $row_music['img'] ?>" draggable="false" class="img-fluid rounded-start  img-music" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">سلام فرمانده</h5>
-                    <p class="card-text">موسیقی پر طرفدار این روزهای کشور که درباره دهه نودی و چهارصدی ها ساخته شده  </p>
+                    <h5 class="card-title"><?php echo $row_music['title']  ?></h5>
+                    <p class="card-text"><?php echo $row_music['descrip']  ?></p>
                     <audio controls class="music-player">
-                    
-                      <source src="img/Ali.mp3" type="audio/mpeg">
+                      <source src="<?php echo  $row_music['link']  ?>" type="audio/mpeg">
                    مرورگر شما پشتیبانی نمی کند!
                   </audio>
                   </div>
                 </div>
               </div>
             </div>
-          </li>
-          <li class="item-b">
-            <div class="card m-3 effect" >
-              <div class="row g-0 ">
-                <div class="col-md-4 ">
-                  <img src="img/background-showcase.jpg" draggable="false" class="img-fluid rounded-start img-music" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">سلام فرمانده</h5>
-                    <p class="card-text">موسیقی پر طرفدار این روزهای کشور که درباره دهه نودی و چهارصدی ها ساخته شده  </p>
-                    <audio controls class="music-player">
-                    
-                      <source src="img/Ali.mp3" type="audio/mpeg">
-                   مرورگر شما پشتیبانی نمی کند!
-                  </audio>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="item-c">
-            <div class="card m-3 effect">
-              <div class="row g-0 ">
-                <div class="col-md-4 ">
-                  <img src="img/background-showcase.jpg" draggable="false"  class="img-fluid rounded-start img-music" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">سلام فرمانده</h5>
-                    <p class="card-text">موسیقی پر طرفدار این روزهای کشور که درباره دهه نودی و چهارصدی ها ساخته شده  </p>
-                    <audio controls class="music-player">
-                    
-                      <source src="img/Ali.mp3" type="audio/mpeg">
-                   مرورگر شما پشتیبانی نمی کند!
-                  </audio>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="item-d">
-            <div class="card m-3 effect" >
-              <div class="row g-0 ">
-                <div class="col-md-4 ">
-                  <img src="img/background-showcase.jpg" draggable="false"  class="img-fluid rounded-start img-music" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">سلام فرمانده</h5>
-                    <p class="card-text">موسیقی پر طرفدار این روزهای کشور که درباره دهه نودی و چهارصدی ها ساخته شده  </p>
-                    <audio controls class="music-player">
-                    
-                      <source src="img/Ali.mp3" type="audio/mpeg">
-                   مرورگر شما پشتیبانی نمی کند!
-                  </audio>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
+            </li>
+          <?php 
+          
+        }
+
+          ?>
+            
           <div class="more more-book ">صوت های بیشتر<span> </span></div>
         </ul>
       </div>

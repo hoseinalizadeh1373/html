@@ -15,11 +15,13 @@ let scroll = document.getElementById("scroll-down");
 
 function drag(str){
     fundrag(str);
+  
 }
 
   document.addEventListener('DOMContentLoaded', fundrag(str)) ;
   function fundrag(str)
   {
+   
     const ele = document.getElementById(str);
     ele.style.cursor = 'grab';
 

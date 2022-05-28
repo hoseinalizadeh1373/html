@@ -369,7 +369,7 @@ position: absolute;
     transform: translate(-50%,-50%);
     width:100%;
     height: 100%;
-    background-color: rgba(92,95,236,0.6);
+    background-color: rgba(171, 92, 236, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -459,8 +459,10 @@ height: 100%;
     margin-right: 0px;
     margin-left: 10px;
     position: relative;
-    direction: rtl;
-    
+  }
+  #slider .more{
+    position: absolute;
+    top: 70%;
   }
   .cs-hidden{
     display: flex;
@@ -468,6 +470,7 @@ height: 100%;
     width: 100%;
     height: auto;
     overflow: hidden;
+    margin: 10px;
 
     scroll-snap-type: proximity;
     scroll-behavior: smooth;
@@ -475,7 +478,6 @@ height: 100%;
     justify-content: right;
     cursor: grab;
     user-select: none;
-    z-index: 0;
     background: transparent;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
@@ -639,10 +641,13 @@ height: 100%;
     margin-bottom: 0.1rem;
     position: relative;
     overflow: hidden;
+
    
   }
   #section2 ul ,#section3 ul{
     list-style: none;
+    
+   
     
   }
   #section2 ul{
@@ -657,7 +662,7 @@ height: 100%;
     background-image: linear-gradient( 135deg, #FF96F9 10%, #C32BAC 100%);
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 310px;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
   }
@@ -676,6 +681,7 @@ height: 100%;
     cursor: pointer;
     width: 40%;
     height: 40%;
+    max-height: 40%;
     padding: 4px ;
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     transition: all ease-in-out 1s;
@@ -695,10 +701,17 @@ height: 100%;
     flex-direction: column;
     justify-content: right;
     align-items: flex-start;
+    
     position: relative;
   }
   .type-book span{
+    overflow: hidden;
+    max-width: 25ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   
     margin: 5px;
+    margin-left: 20px;
     
   }
   #download-book{

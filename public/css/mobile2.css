@@ -13,19 +13,13 @@
         align-items: flex-start;
         justify-content: flex-start;
         align-content: flex-start;
-        overflow: scroll;
-        background: yellowgreen;
+        
+     
     }
     #slider ul {
        
         margin-right: 3px;
-        margin: 20px;
-        cursor: grab;
-        user-select: none;
-        background: transparent;
-        -ms-overflow-style: none; /* for Internet Explorer, Edge */
-        scrollbar-width: none; /* for Firefox */
-        overflow-x: scroll; 
+     
       
         
     }

@@ -19,7 +19,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet"   href="css/mobile.css"/>
+    <link rel="stylesheet"   href="css/mobile2.css"/>
     <title>مهدویت</title>
   </head>
 
