@@ -33,7 +33,10 @@
   
   a {
     text-decoration: none;
-  
+    color: #dd980e;
+  }
+  a :hover{
+    color: #222222;
   }
   /* Utility Classes */
   
@@ -265,13 +268,11 @@ position: absolute;
     padding: 0.0rem;
     display: flex;
     flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+   
   }
-  /* .titr  h3{
-    background: linear-gradient();
-    padding: 0.4rem;
-    border-radius: 25px;
-    border: 1px solid #145CFF;
-  } */
+ 
   
   .btn2-grad {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
   .btn2-grad {
@@ -349,7 +350,7 @@ position: absolute;
   }
   .type span{
     color:rgba(26,26,26,0.5);    
-    writing-mode: sideways-rl;
+  
     text-overflow: clip;
    display: -webkit-box;
    -webkit-line-clamp:1; /* number of lines to show */
@@ -445,11 +446,7 @@ height: 100%;
     visibility: visible;
     animation:fade .5s;
   }
-   a{
-     text-decoration: none;
-     color: #0c0903;
 
-   }
   @keyframes fade{
     0%{
       opacity: 0;
@@ -501,9 +498,11 @@ height: 100%;
     margin-right: 0px;
   }
 
-  
-  #showcase{
+  .back_showcase{
     background: url('../img/background-showcase.jpg') no-repeat center center/cover;
+  }
+  #showcase{
+
     height: 100vh;
     position: relative;
   }
@@ -623,7 +622,10 @@ height: 100%;
     vertical-align: middle;
     text-align: center;
     color: #0c0903;
-    background: yellow;
+   
+  }
+  .more:hover{
+    color: #333;
   }
   .more span{
     

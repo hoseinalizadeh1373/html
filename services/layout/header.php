@@ -18,9 +18,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style2.css" />
     <link rel="stylesheet"   href="css/mobile2.css"/>
-    <title>مهدویت</title>
+    <title><?php echo $Pagetitle ?></title>
   </head>
 
   <body>
@@ -59,19 +59,4 @@
             </div>
           </div>
         </nav>
-        <div class="container-scroll">
-          <a href="#slider">
-            <div class="scroll-down" id="scroll-down"></div>
-          </a>
-          <div class="showcase-content">
-            <div>
-              <div class="showcase_img" id="showcase_img">
-                <img src="img/sallalah2.png" class="img" />
-                <img src="img/abasaleh (2).png" class="img2" />
-                <img src="img/almahdi2.png" class="img3" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
+       

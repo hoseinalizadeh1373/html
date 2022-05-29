@@ -4,10 +4,9 @@ let header = document.getElementById("showcase");
 
 let path = window.location.pathname;
 let page = path.split("/").pop();
-alert(page);
-if(page.contains("index")){
+console.log(page);
+if(path.endsWith("index.php") || page.length == 0){
     header.classList.add("back_showcase");
-    
 }
 else{
     header.classList.remove("back_showcase");

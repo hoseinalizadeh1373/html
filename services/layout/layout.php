@@ -1,6 +1,6 @@
 <?php
 class layout {
-    public function pageheader()
+    public function pageheader($Pagetitle)
     {
         require(__DIR__."/header.php");
     }

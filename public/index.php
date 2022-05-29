@@ -18,10 +18,25 @@ $result_music = $music_list->SelectFromTable(6);
  * 
  */
 $layout = new layout();
-$layout->pageheader();
+$layout->pageheader("صفحه اصلی - مهدویت");
 
 ?>
-  
+   <div class="container-scroll" >
+          <a href="#slider">
+            <div class="scroll-down" id="scroll-down"></div>
+          </a>
+          <div class="showcase-content">
+            <div>
+              <div class="showcase_img" id="showcase_img">
+                <img src="img/sallalah2.png" class="img" />
+                <img src="img/abasaleh (2).png" class="img2" />
+                <img src="img/almahdi2.png" class="img3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
 <main>
     <section id="slider" >
       <div class="titr"><h3 class="btn2-grad">ویدیوهای مهدویت</h3></div>
@@ -59,7 +74,7 @@ $layout->pageheader();
 <?php
       }
 ?>      
-  <div class="more">ویدیوهای بیشتر<span> </span></div>
+  <a href="video.php" class="more">ویدیوهای بیشتر<span> </span></a>
       </ul>
      
       <a href="#section2">
